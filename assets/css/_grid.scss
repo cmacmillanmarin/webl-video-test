@@ -1,0 +1,40 @@
+//
+// _grid.scss
+
+$gap: 20px;
+$columns: 12;
+
+.in-layout {
+    padding: 0 $gap;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+    .gap-left-#{$i} {
+        margin-left: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+    .gap-right-#{$i} {
+        margin-left: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+}
+
+@for $i from 1 through $columns {
+    .c-#{$i} {
+        width: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+    .gap-left-#{$i} {
+        margin-left: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+    .gap-right-#{$i} {
+        margin-left: calc((#{$i} / #{$columns}) * 100% - (#{$gap} * .5));
+    }
+}
