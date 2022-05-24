@@ -1,6 +1,7 @@
 //
 // nuxt.config.ts
 
+import glsl from "vite-plugin-glsl";
 import { defineNuxtConfig } from "nuxt"
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -17,5 +18,8 @@ export default defineNuxtConfig({
                 { src: "/js/gsap/CustomEase.min.js", defer: true },
             ]
         }
+    },
+    vite: {
+        plugins:[glsl()]
     }
 })
